@@ -7,7 +7,9 @@
   --color-primary: oklch(5% 0.15 318);
   --color-primary-light: oklch(100% 0.15 318);
   --color-secondary: oklch(5% 0.075 318);
+  --color-secondary-100: oklch(5% 0.075 318 / 0.1);
   --color-secondary-light: oklch(100% 0.05 318);
+  --color-secondary-light-100: oklch(100% 0.05 318 / 0.1);
   --color-cta: oklch(80% 0.5 217);
   --color-ctext: oklch(92% 0.0001 271);
   --color-ctext-light: oklch(28% 0.0024 250);
@@ -15,5 +17,5 @@
 }
 
 body {
-  color: oklch(15.63% 0.08495 296.881);
+  color: oklch(98.075% 0.01694 325.398 / 0.504);
 }

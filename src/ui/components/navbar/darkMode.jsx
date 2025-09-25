@@ -1,5 +1,6 @@
 'use-client';
 import { useState, useEffect } from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa';
 
 export default function DarkMode(props) {
   const [mounted, setMounted] = useState(false);
@@ -9,12 +10,16 @@ export default function DarkMode(props) {
   }, []);
 
   if (!mounted) {
-    return <button className="h-9 w-9">🌙</button>; // placeholder
+    return (
+      <button className="h-9 w-9">
+        <FaMoon />
+      </button>
+    );
   }
 
   return (
     <button
-      className="h-9 w-9 text-2xl p-3"
+      className="h-9 w-9 text-2xl"
       onClick={() => {
         if (localStorage.getItem('theme') === 'dark') {
           localStorage.setItem('theme', 'light');
@@ -23,7 +28,11 @@ export default function DarkMode(props) {
         }
         props.toggle(localStorage.getItem('theme'));
       }}>
-      {localStorage.getItem('theme') === 'dark' ? '☀️' : '🌙'}
+      {localStorage.getItem('theme') === 'dark' ? (
+        <FaSun className="text-yellow-400" />
+      ) : (
+        <FaMoon className="text-primary" />
+      )}
     </button>
   );
 }
