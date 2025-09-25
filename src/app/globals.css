@@ -1,6 +1,19 @@
 @import 'tailwindcss';
+
+/* This makes theme switcher work */
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
+@theme {
+  --color-primary: oklch(5% 0.15 318);
+  --color-primary-light: oklch(100% 0.15 318);
+  --color-secondary: oklch(5% 0.075 318);
+  --color-secondary-light: oklch(100% 0.05 318);
+  --color-cta: oklch(80% 0.5 217);
+  --color-ctext: oklch(92% 0.0001 271);
+  --color-ctext-light: oklch(28% 0.0024 250);
+  /* ... */
+}
+
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  color: oklch(15.63% 0.08495 296.881);
 }
