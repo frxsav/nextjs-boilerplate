@@ -1,15 +1,9 @@
 'use client';
 
-import { useState } from 'react';
-import { Header } from '@/ui';
-
 export default function Home() {
-  const [theme, setTheme] = useState(localStorage.getItem('theme'));
-
   return (
-    <div data-theme={theme} className="dark:bg-primary bg-primary-light">
-      <Header navToggle={setTheme}></Header>
-      <div className="mt-30 font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+    <div className="dark:bg-primary bg-primary-light pt-16">
+      <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
         <div className="bg-secondary-light dark:bg-secondary rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5">
           <div>
             <span className="inline-flex items-center justify-center rounded-md bg-cta text-ctext-light p-2 shadow-lg">
