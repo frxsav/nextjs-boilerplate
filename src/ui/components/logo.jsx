@@ -4,7 +4,7 @@ export default function Logo() {
   return (
     <div className="flex-shrink-0">
       <Link href="/" className="flex items-center">
-        <span className="text-2xl font-bold text-gray-900 dark:text-white">
+        <span className="text-3xl font-bold text-primary dark:text-primary-light">
           Logo
         </span>
       </Link>

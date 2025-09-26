@@ -6,9 +6,5 @@ export default function Header(props) {
   useEffect(() => {
     props.navToggle(theme);
   });
-  return (
-    <header>
-      <Navbar navToggle={setTheme} />
-    </header>
-  );
+  return <Navbar navToggle={setTheme} />;
 }

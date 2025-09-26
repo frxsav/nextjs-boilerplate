@@ -1,7 +1,23 @@
+import { Logo } from '../components';
+import { DesktopMenuLinks, LegalLinks, Socials } from '../components';
+
 export default function Footer() {
   return (
-    <footer>
-      <h1>Footer Section</h1>
-    </footer>
+    <>
+      <div className="bg-secondary-light dark:bg-secondary p-4 px-12">
+        <div className="grid md:justify-start justify-center col-span-12 pb-8 pt-4">
+          <Logo />
+        </div>
+        <div className="grid grid-cols-12 border-b-1 border-primary dark:border-primary-light">
+          {/* Quick Links */}
+          <DesktopMenuLinks flexDirection="col" fromFooter={true} />
+          {/* Privacy, Cookies and Terms&Cons */}
+          <LegalLinks />
+          <div className="col-span-12 flex justify-center md:justify-start">
+            <Socials></Socials>
+          </div>
+        </div>
+      </div>
+    </>
   );
 }

@@ -1,8 +1,16 @@
 'use client';
+import Head from 'next/head';
 
 export default function Home() {
   return (
-    <div className="dark:bg-primary bg-primary-light pt-16">
+    <>
+      <Head>
+        <title>Home</title>
+        <meta name="description" content="Home page description" />
+        <meta property="og:title" content="og title" />
+        <meta property="og:description" content="og description" />
+        <meta property="og:image" content="og-image.jpg" />
+      </Head>
       <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
         <div className="bg-secondary-light dark:bg-secondary rounded-lg px-6 py-8 ring shadow-xl ring-gray-900/5">
           <div>
@@ -19,6 +27,6 @@ export default function Home() {
           </p>
         </div>
       </div>
-    </div>
+    </>
   );
 }

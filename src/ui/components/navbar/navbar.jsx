@@ -1,13 +1,7 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import {
-  DarkMode,
-  Logo,
-  DesktopMenuLinks,
-  MobileMenuLinks,
-  BurgerMenu,
-} from '..';
+import { DarkMode, BurgerMenu, DesktopMenuLinks, MobileMenuLinks, Logo } from '..';
 
 export default function Navbar(props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -22,7 +16,7 @@ export default function Navbar(props) {
   };
 
   return (
-    <nav className="bg-secondary-light dark:bg-secondary border-b border-secondary dark:border-secondary-light">
+    <nav className="bg-secondary-light dark:bg-secondary border-b border-secondary dark:border-secondary-light px-12">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
