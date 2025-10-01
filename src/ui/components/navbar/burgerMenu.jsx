@@ -3,7 +3,7 @@ export default function BurgerMenu(props) {
     <div className="md:hidden">
       <button
         onClick={props.toggleMenu}
-        className="p-2 rounded-md text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="p-2 rounded-md text-ctext dark:text-ctext-light dark:hover:bg-secondary-light-100 hover:bg-secondary-100 focus:outline-none"
         aria-label="Toggle menu">
         {props.isMenuOpen ? (
           <svg

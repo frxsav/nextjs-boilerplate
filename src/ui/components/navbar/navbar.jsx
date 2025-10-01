@@ -1,14 +1,29 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { DarkMode, BurgerMenu, DesktopMenuLinks, MobileMenuLinks, Logo } from '..';
+import {
+  DarkMode,
+  BurgerMenu,
+  DesktopMenuLinks,
+  MobileMenuLinks,
+  Logo,
+} from '..';
 
 export default function Navbar(props) {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [theme, setTheme] = useState(localStorage.getItem('theme'));
+  const [hasScrolled, setHasScrolled] = useState(false);
+  const [theme, setTheme] = useState(null);
+
+  useEffect(() => {
+    const localTheme = localStorage.getItem('theme');
+    setTheme(localTheme);
+  });
 
   useEffect(() => {
     props.navToggle(theme);
+    document.addEventListener('scroll', () => {
+      setHasScrolled(window.scrollY > 0 ? true : false);
+    });
   });
 
   const toggleMenu = () => {
@@ -16,8 +31,8 @@ export default function Navbar(props) {
   };
 
   return (
-    <nav className="bg-secondary-light dark:bg-secondary border-b border-secondary dark:border-secondary-light px-12">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav>
+      <div className="mx-auto mt-8 rounded-3xl px-8 w-[80%] backdrop-blur-sm bg-secondary-light/20 dark:bg-secondary/30">
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <Logo />
@@ -27,7 +42,6 @@ export default function Navbar(props) {
           <div className="flex items-center space-x-4">
             {/* Theme Toggle Button */}
             <DarkMode toggle={setTheme}></DarkMode>
-
             {/* Mobile menu button */}
             <BurgerMenu isMenuOpen={isMenuOpen} toggleMenu={toggleMenu} />
           </div>

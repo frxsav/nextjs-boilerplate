@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export default function LegalLinks() {
   return (
-    <div className="flex flex-col space-y-2 text-sm text-ctext-light dark:text-ctext col-span-4">
-      <p className="text-ctext-light dark:text-ctext font-bold pb-4 text-xl">
+    <div className="flex flex-col space-y-2 text-sm text-ctext dark:text-ctext col-span-4">
+      <p className="text-ctext dark:text-ctext-light font-bold pb-4 text-xl">
         Legal Links
       </p>
       <Link

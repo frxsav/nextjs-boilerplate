@@ -1,6 +1,7 @@
 export * from './navbar';
-export { default as Logo } from './logo';
-export { default as DesktopMenuLinks } from './desktopMenuLinks';
-export { default as MobileMenuLinks } from './mobileMenuLinks';
-export { default as LegalLinks } from './legalLinks';
-export { default as Socials } from './socials';
+export { default as Logo } from './Logo';
+export { default as DesktopMenuLinks } from './DesktopMenuLinks';
+export { default as MobileMenuLinks } from './MobileMenuLinks';
+export { default as LegalLinks } from './LegalLinks';
+export { default as Socials } from './Socials';
+export { default as Copyright } from './Copyright';

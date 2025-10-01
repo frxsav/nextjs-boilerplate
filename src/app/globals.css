@@ -4,18 +4,18 @@
 @custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
 
 @theme {
-  --color-primary: oklch(5% 0.15 318);
-  --color-primary-light: oklch(100% 0.15 318);
-  --color-secondary: oklch(5% 0.075 318);
-  --color-secondary-100: oklch(5% 0.075 318 / 0.1);
-  --color-secondary-light: oklch(100% 0.05 318);
-  --color-secondary-light-100: oklch(100% 0.05 318 / 0.1);
-  --color-cta: oklch(80% 0.5 217);
-  --color-ctext: oklch(92% 0.0001 271);
-  --color-ctext-light: oklch(28% 0.0024 250);
+  --color-primary: oklch(15% 0.04 285);
+  --color-primary-light: oklch(80% 0.077 290);
+  --color-secondary: oklch(22% 0.008 308);
+  --color-secondary-100: oklch(22% 0.008 308 / 0.1);
+  --color-secondary-light: oklch(90% 0.01 325);
+  --color-secondary-light-100: oklch(90% 0.01 325 / 0.1);
+  --color-cta: oklch(58% 0.18 141);
+  --color-ctext: oklch(22% 0.008 308);
+  --color-ctext-light: oklch(90% 0.01 325);
   /* ... */
 }
 
 body {
-  color: oklch(98.075% 0.01694 325.398 / 0.504);
+  color: oklch(58.319% 0.18576 141.036);
 }

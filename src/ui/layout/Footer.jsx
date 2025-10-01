@@ -1,5 +1,10 @@
-import { Logo } from '../components';
-import { DesktopMenuLinks, LegalLinks, Socials } from '../components';
+import {
+  Logo,
+  LegalLinks,
+  Socials,
+  Copyright,
+  DesktopMenuLinks,
+} from '../components';
 
 export default function Footer() {
   return (
@@ -8,7 +13,7 @@ export default function Footer() {
         <div className="grid md:justify-start justify-center col-span-12 pb-8 pt-4">
           <Logo />
         </div>
-        <div className="grid grid-cols-12 border-b-1 border-primary dark:border-primary-light">
+        <div className="grid grid-cols-12 border-b-1 border-ctext dark:border-ctext-light">
           {/* Quick Links */}
           <DesktopMenuLinks flexDirection="col" fromFooter={true} />
           {/* Privacy, Cookies and Terms&Cons */}
@@ -17,6 +22,7 @@ export default function Footer() {
             <Socials></Socials>
           </div>
         </div>
+        <Copyright></Copyright>
       </div>
     </>
   );

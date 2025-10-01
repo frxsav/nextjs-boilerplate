@@ -19,7 +19,7 @@ export default function DarkMode(props) {
 
   return (
     <button
-      className="h-9 w-9 text-2xl"
+      className="h-9 w-9 text-2xl cursor-pointer"
       onClick={() => {
         if (localStorage.getItem('theme') === 'dark') {
           localStorage.setItem('theme', 'light');
@@ -29,9 +29,9 @@ export default function DarkMode(props) {
         props.toggle(localStorage.getItem('theme'));
       }}>
       {localStorage.getItem('theme') === 'dark' ? (
-        <FaSun className="text-yellow-400" />
+        <FaSun className="text-ctext-light" />
       ) : (
-        <FaMoon className="text-primary" />
+        <FaMoon className="text-ctext" />
       )}
     </button>
   );

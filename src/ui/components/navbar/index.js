@@ -1,3 +1,3 @@
-export { default as DarkMode } from './darkMode';
-export { default as Navbar } from './navbar';
-export { default as BurgerMenu } from './burgerMenu';
+export { default as DarkMode } from './DarkMode';
+export { default as Navbar } from './Navbar';
+export { default as BurgerMenu } from './BurgerMenu';
