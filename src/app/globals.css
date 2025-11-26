@@ -1,8 +1,5 @@
 @import 'tailwindcss';
 
-/* This makes theme switcher work */
-@custom-variant dark (&:where([data-theme=dark], [data-theme=dark] *));
-
 @theme {
   --color-primary: oklch(15% 0.04 285);
   --color-primary-light: oklch(80% 0.077 290);
