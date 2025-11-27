@@ -3,7 +3,7 @@
 import { useState } from 'react';
 import { BurgerMenu, DesktopMenuLinks, MobileMenuLinks, Logo } from '..';
 
-export default function Navbar(props) {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -11,7 +11,7 @@ export default function Navbar(props) {
   };
 
   return (
-    <div className="mx-auto mt-8 rounded-3xl px-8 w-[80%] backdrop-blur-sm bg-secondary-light/20">
+    <div className="fixed top-8 translate-x-1/2 right-1/2 rounded-3xl px-8 w-[80%] backdrop-blur-lg bg-primary/25">
       <div className="flex justify-between items-center h-16">
         {/* Logo */}
         <Logo />
